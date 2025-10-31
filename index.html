@@ -3,14 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Flutter App</title>
+    <title>Government Job Announcements App Info</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and a professional color palette -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1D4ED8', // Tailwind Blue 700
+                        'accent-yellow': '#F59E0B', // Tailwind Amber 500
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <h1>Welcome to My Flutter App</h1>
-    <p>This is the website for my mobile application.</p>
-    <ul>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms-of-service.html">Terms of Service</a></li>
-    </ul>
+<body class="bg-gray-50 min-h-screen p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto space-y-8">
+
+        <!-- Header Section -->
+        <header class="text-center pt-8 pb-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                Government Job Announcements
+            </h1>
+            <p class="mt-2 text-xl font-medium text-gray-600">
+                Unofficial App Information
+            </p>
+        </header>
+
+        <!-- Main Content Card -->
+        <div class="bg-white p-6 md:p-10 rounded-2xl shadow-xl border border-gray-100">
+
+            <!-- App Description -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">Our Mission</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    The "Government Job Announcements" app aims to assist job seekers by compiling and displaying job vacancies advertised by government units in an easy-to-access format.
+                </p>
+            </section>
+
+            <!-- Feature List -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">What the App Offers</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Feature 1: Facilitating Access -->
+                    <div class="flex p-4 bg-blue-50 rounded-xl shadow-sm">
+                        <!-- Icon: Document/List -->
+                        <svg class="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m-5 8a9 9 0 110-18 9 9 0 010 18z"></path></svg>
+                        <div class="ml-4">
+                            <p class="text-lg font-medium text-gray-800">Facilitated Access</p>
+                            <p class="text-sm text-gray-600 mt-1">
+                                We publish and display advertised jobs, including the required conditions stated in the original advertisements, as well as the dates of electronic and oral exams (according to available information).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Official Source Compilation -->
+                    <div class="flex p-4 bg-blue-50 rounded-xl shadow-sm">
+                        <!-- Icon: Check Mark/Source -->
+                        <svg class="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <div class="ml-4">
+                            <p class="text-lg font-medium text-gray-800">Verified Data Source</p>
+                            <p class="text-sm text-gray-600 mt-1">
+                                All job data is compiled from the **official government jobs portal** of the **Central Agency for Organization and Administration in the Arab Republic of Egypt**.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Official Link CTA -->
+            <section class="text-center p-6 bg-primary-blue rounded-xl shadow-lg transform hover:scale-[1.01] transition duration-300">
+                <p class="text-xl font-semibold text-white mb-4">
+                    To view the official source and apply for jobs, please visit:
+                </p>
+                <a href="https://jobs.caoa.gov.eg" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-full shadow-sm text-primary-blue bg-white hover:bg-gray-100 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    jobs.caoa.gov.eg
+                </a>
+            </section>
+
+        </div>
+
+        <!-- Disclaimer Section (MUST STAND OUT) -->
+        <div class="p-6 md:p-8 bg-white border-2 border-accent-yellow rounded-2xl shadow-xl">
+            <h2 class="flex items-center text-xl font-extrabold text-accent-yellow mb-4 border-b border-accent-yellow/50 pb-2">
+                <!-- Icon: Warning Triangle -->
+                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Important Disclaimer
+            </h2>
+            <div class="space-y-4 text-gray-700 leading-relaxed text-sm md:text-base">
+                <p>
+                    <span class="font-bold">Independence:</span> This application (Government Job Announcements) is an independent application and **does not represent** the Central Agency for Organization and Administration or any other governmental entity in Egypt, nor does it claim any governmental affiliation.
+                </p>
+                <p>
+                    <span class="font-bold">Authority:</span> The application is not affiliated with any governmental institution and **does not have the authority** to hire, receive, or process applications.
+                </p>
+                <p class="p-3 bg-red-50 border-l-4 border-red-500 rounded-md">
+                    <span class="font-bold">User Responsibility:</span> The information provided here is for informational purposes only. Users should **always refer to the official website** mentioned above to apply for jobs, verify the accuracy of any information, or obtain final and official details.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer for subtle branding -->
+    <footer class="mt-8 text-center text-gray-400 text-xs">
+        <p>&copy; 2024 Unofficial Job Announcements App. Data compiled from public official sources.</p>
+    </footer>
+
 </body>
 </html>
